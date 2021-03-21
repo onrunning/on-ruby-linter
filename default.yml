@@ -1,0 +1,37 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  DisplayStyleGuide: true
+  TargetRubyVersion: 2.5
+  NewCops: enable
+  Exclude:
+    - bin/**/*
+    - db/schema.rb
+    - tmp/**/*
+    - vendor/**/*
+    - node_modules/**/*
+
+Layout/ClassStructure:
+  Enabled: true
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+
+Metrics/BlockLength:
+  ExcludedMethods:
+    - included # for concerns
+    - configure # for initializers
+    # Exclude rspec blocks
+    - feature
+    - context
+    - describe
+
+Style/Documentation:
+  # We do not require class documentation
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false

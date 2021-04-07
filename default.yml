@@ -21,7 +21,7 @@ Lint/AmbiguousBlockAssociation:
     - spec/**/*
 
 Metrics/BlockLength:
-  ExcludedMethods:
+  IgnoredMethods:
     - included # for concerns
     - configure # for initializers
     # Exclude rspec blocks
